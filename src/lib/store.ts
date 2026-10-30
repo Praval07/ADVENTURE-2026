@@ -11,7 +11,7 @@ import {
 } from '@/types';
 import { OFFICIAL_SETTINGS } from './constants';
 
-// Initial pre-seeded data for seamless development and live interaction
+// Default user profiles for role-based demo/testing
 export const INITIAL_USER: UserProfile = {
   id: 'usr-leader-1',
   email: 'arjun.mehta@recp.ac.in',
@@ -28,7 +28,7 @@ export const INITIAL_ADMIN: UserProfile = {
   fullName: 'Prof. R. K. Srivastava',
   mobileNumber: '+91 94150 12345',
   role: 'admin',
-  collegeName: 'Institution’s Innovation Council, BRBBARECP',
+  collegeName: 'Institution\u2019s Innovation Council, BRBBARECP',
   createdAt: '2026-10-28T09:00:00Z',
 };
 
@@ -42,247 +42,19 @@ export const INITIAL_JUDGE: UserProfile = {
   createdAt: '2026-10-28T12:00:00Z',
 };
 
-export const INITIAL_TEAMS: Team[] = [
-  {
-    id: 'team-1',
-    teamRegId: 'ADV26-TM-1042',
-    teamName: 'CineCraft Innovators',
-    leaderId: 'usr-leader-1',
-    leaderName: 'Arjun Mehta',
-    leaderEmail: 'arjun.mehta@recp.ac.in',
-    teamSize: 3,
-    categoryId: 'cat-2',
-    categoryName: 'Startups & Entrepreneurs',
-    registrationStatus: 'approved',
-    photoVerificationStatus: 'Verified',
-    videoSubmissionStatus: 'submitted',
-    createdAt: '2026-10-29T11:15:00Z',
-    updatedAt: '2026-10-29T15:30:00Z',
-    members: [
-      {
-        id: 'mem-1',
-        teamId: 'team-1',
-        fullName: 'Arjun Mehta',
-        enrollmentNumber: '220198010001',
-        department: 'Computer Science & Engineering',
-        yearSemester: '3rd Year / 5th Sem',
-        collegeEmail: 'arjun.mehta@recp.ac.in',
-        mobileNumber: '+91 98765 43210',
-        isLeader: true,
-        photoUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&q=80',
-        photoStatus: 'Verified',
-        createdAt: '2026-10-29T11:15:00Z',
-      },
-      {
-        id: 'mem-2',
-        teamId: 'team-1',
-        fullName: 'Priya Sharma',
-        enrollmentNumber: '220198010045',
-        department: 'Electronics & Communication',
-        yearSemester: '3rd Year / 5th Sem',
-        collegeEmail: 'priya.s@recp.ac.in',
-        mobileNumber: '+91 98765 43211',
-        isLeader: false,
-        photoStatus: 'Verified',
-        createdAt: '2026-10-29T11:20:00Z',
-      },
-      {
-        id: 'mem-3',
-        teamId: 'team-1',
-        fullName: 'Rohit Verma',
-        enrollmentNumber: '230198010088',
-        department: 'Information Technology',
-        yearSemester: '2nd Year / 3rd Sem',
-        collegeEmail: 'rohit.v@recp.ac.in',
-        mobileNumber: '+91 98765 43212',
-        isLeader: false,
-        photoStatus: 'Verified',
-        createdAt: '2026-10-29T11:25:00Z',
-      },
-    ],
-  },
-  {
-    id: 'team-2',
-    teamRegId: 'ADV26-TM-2089',
-    teamName: 'Awadh Agro Storytellers',
-    leaderId: 'usr-leader-2',
-    leaderName: 'Sneha Patel',
-    leaderEmail: 'sneha.p@recp.ac.in',
-    teamSize: 4,
-    categoryId: 'cat-1',
-    categoryName: 'Local Business',
-    registrationStatus: 'approved',
-    photoVerificationStatus: 'Under Verification',
-    videoSubmissionStatus: 'submitted',
-    createdAt: '2026-10-29T12:00:00Z',
-    updatedAt: '2026-10-29T16:00:00Z',
-    members: [
-      {
-        id: 'mem-201',
-        teamId: 'team-2',
-        fullName: 'Sneha Patel',
-        enrollmentNumber: '220198020014',
-        department: 'Civil Engineering',
-        yearSemester: '3rd Year / 5th Sem',
-        collegeEmail: 'sneha.p@recp.ac.in',
-        mobileNumber: '+91 97654 32109',
-        isLeader: true,
-        photoUrl: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=500&q=80',
-        photoStatus: 'Under Verification',
-        createdAt: '2026-10-29T12:00:00Z',
-      },
-      {
-        id: 'mem-202',
-        teamId: 'team-2',
-        fullName: 'Devansh Tiwari',
-        enrollmentNumber: '220198020018',
-        department: 'Civil Engineering',
-        yearSemester: '3rd Year / 5th Sem',
-        collegeEmail: 'devansh.t@recp.ac.in',
-        mobileNumber: '+91 97654 32110',
-        isLeader: false,
-        photoStatus: 'Verified',
-        createdAt: '2026-10-29T12:05:00Z',
-      },
-      {
-        id: 'mem-203',
-        teamId: 'team-2',
-        fullName: 'Ananya Gupta',
-        enrollmentNumber: '230198010012',
-        department: 'Computer Science & Engineering',
-        yearSemester: '2nd Year / 3rd Sem',
-        collegeEmail: 'ananya.g@recp.ac.in',
-        mobileNumber: '+91 97654 32111',
-        isLeader: false,
-        photoStatus: 'Verified',
-        createdAt: '2026-10-29T12:10:00Z',
-      },
-      {
-        id: 'mem-204',
-        teamId: 'team-2',
-        fullName: 'Faizan Khan',
-        enrollmentNumber: '230198010034',
-        department: 'Mechanical Engineering',
-        yearSemester: '2nd Year / 3rd Sem',
-        collegeEmail: 'faizan.k@recp.ac.in',
-        mobileNumber: '+91 97654 32112',
-        isLeader: false,
-        photoStatus: 'Verified',
-        createdAt: '2026-10-29T12:15:00Z',
-      },
-    ],
-  },
-  {
-    id: 'team-3',
-    teamRegId: 'ADV26-TM-3115',
-    teamName: 'EcoVibe Films',
-    leaderId: 'usr-leader-3',
-    leaderName: 'Aakash Tripathi',
-    leaderEmail: 'aakash.t@recp.ac.in',
-    teamSize: 2,
-    categoryId: 'cat-6',
-    categoryName: 'Social Entrepreneurship',
-    registrationStatus: 'approved',
-    photoVerificationStatus: 'Rejected – Retake Required',
-    videoSubmissionStatus: 'not_submitted',
-    createdAt: '2026-10-29T13:30:00Z',
-    updatedAt: '2026-10-29T14:45:00Z',
-    members: [
-      {
-        id: 'mem-301',
-        teamId: 'team-3',
-        fullName: 'Aakash Tripathi',
-        enrollmentNumber: '220198030005',
-        department: 'Electrical Engineering',
-        yearSemester: '3rd Year / 5th Sem',
-        collegeEmail: 'aakash.t@recp.ac.in',
-        mobileNumber: '+91 99887 76655',
-        isLeader: true,
-        photoUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=500&q=80',
-        photoStatus: 'Rejected – Retake Required',
-        photoRejectionReason: 'Face blurred and insufficient lighting. Please ensure proper frontal lighting without shadows.',
-        createdAt: '2026-10-29T13:30:00Z',
-      },
-      {
-        id: 'mem-302',
-        teamId: 'team-3',
-        fullName: 'Ritu Sen',
-        enrollmentNumber: '220198030022',
-        department: 'Electrical Engineering',
-        yearSemester: '3rd Year / 5th Sem',
-        collegeEmail: 'ritu.s@recp.ac.in',
-        mobileNumber: '+91 99887 76656',
-        isLeader: false,
-        photoStatus: 'Verified',
-        createdAt: '2026-10-29T13:35:00Z',
-      },
-    ],
-  },
-];
+// ─── Teams ───────────────────────────────────────────────────────────────────
+// All demo teams removed — real teams will populate via registration
+export const INITIAL_TEAMS: Team[] = [];
 
-export const INITIAL_SUBMISSIONS: VideoSubmission[] = [
-  {
-    id: 'sub-1',
-    submissionId: 'ADV26-VID-5501',
-    teamId: 'team-1',
-    teamName: 'CineCraft Innovators',
-    teamRegId: 'ADV26-TM-1042',
-    categoryId: 'cat-2',
-    categoryName: 'Startups & Entrepreneurs',
-    videoTitle: 'AuraPay: Frictionless Micro-Savings for Bharat',
-    startupName: 'AuraPay Technologies',
-    description: 'A 60-second cinematic story depicting a chai vendor seamlessly investing daily loose change into digital gold through automated UPI round-ups.',
-    problemAddressed: 'Lack of accessible, bite-sized investment instruments for grassroots informal business owners.',
-    productDescription: 'An automated micro-saving mobile application that rounds up routine QR-code payments into government-backed sovereign bonds and gold.',
-    videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4',
-    durationSeconds: 62,
-    fileSizeBytes: 24500000,
-    status: 'evaluated',
-    submittedAt: '2026-10-29T14:20:00Z',
-    evaluationsCount: 1,
-    averageScore: 92,
-  },
-  {
-    id: 'sub-2',
-    submissionId: 'ADV26-VID-5502',
-    teamId: 'team-2',
-    teamName: 'Awadh Agro Storytellers',
-    teamRegId: 'ADV26-TM-2089',
-    categoryId: 'cat-1',
-    categoryName: 'Local Business',
-    videoTitle: 'Amrit Amla: The Royal Nectar of Pratapgarh',
-    startupName: 'Pratapgarh Pure Organics',
-    description: 'A dynamic 75-second commercial celebrating Pratapgarhs signature Gooseberry (Amla) farming, showcasing heirloom processing transformed into modern immunity syrups.',
-    problemAddressed: 'Distress sale of raw agricultural yield by farmers due to lack of local branded value addition and direct urban consumer reach.',
-    productDescription: 'Direct farm-to-door packaged cold-pressed organic Amla extracts, candies, and health tonics.',
-    videoUrl: 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4',
-    durationSeconds: 74,
-    fileSizeBytes: 31200000,
-    status: 'submitted',
-    submittedAt: '2026-10-29T15:45:00Z',
-    evaluationsCount: 0,
-    averageScore: 0,
-  },
-];
+// ─── Submissions ─────────────────────────────────────────────────────────────
+// All demo submissions removed — real submissions will appear after teams submit
+export const INITIAL_SUBMISSIONS: VideoSubmission[] = [];
 
-export const INITIAL_EVALUATIONS: Record<string, EvaluationScore> = {
-  'sub-1': {
-    submissionId: 'sub-1',
-    judgeId: 'usr-judge-1',
-    judgeName: 'Dr. Kavita Verma',
-    creativityScore: 19,
-    marketingScore: 18,
-    adQualityScore: 19,
-    businessUnderstandingScore: 14,
-    innovationScore: 13,
-    presentationScore: 9,
-    totalScore: 92,
-    feedback: 'Exceptional storytelling with authentic emotional resonance! Pacing was brisk and the call-to-action is crystal clear. Great camera work and lighting.',
-    isDraft: false,
-    evaluatedAt: '2026-10-29T16:10:00Z',
-  },
-};
+// ─── Evaluations ─────────────────────────────────────────────────────────────
+// All demo evaluations removed — jury scores will be recorded live
+export const INITIAL_EVALUATIONS: Record<string, EvaluationScore> = {};
 
+// ─── Announcements ───────────────────────────────────────────────────────────
 export const INITIAL_ANNOUNCEMENTS: Announcement[] = [
   {
     id: 'ann-1',
@@ -310,64 +82,10 @@ export const INITIAL_ANNOUNCEMENTS: Announcement[] = [
   },
 ];
 
-export const INITIAL_NOTIFICATIONS: InAppNotification[] = [
-  {
-    id: 'notif-1',
-    userId: 'usr-leader-1',
-    title: 'Team Registration Approved',
-    message: 'Your team "CineCraft Innovators" (ADV26-TM-1042) has been approved by the organizers.',
-    type: 'success',
-    isRead: false,
-    link: '/dashboard',
-    createdAt: '2026-10-29T11:30:00Z',
-  },
-  {
-    id: 'notif-2',
-    userId: 'usr-leader-1',
-    title: 'Photo Verification Passed',
-    message: 'Team leader live photo has been verified by the organizing committee.',
-    type: 'success',
-    isRead: false,
-    link: '/dashboard/photo',
-    createdAt: '2026-10-29T12:15:00Z',
-  },
-  {
-    id: 'notif-3',
-    userId: 'usr-leader-1',
-    title: 'Ad Film Submitted Successfully',
-    message: 'Your video "AuraPay: Frictionless Micro-Savings" was submitted and assigned ID ADV26-VID-5501.',
-    type: 'info',
-    isRead: true,
-    link: '/dashboard/video',
-    createdAt: '2026-10-29T14:20:00Z',
-  },
-];
+// ─── Notifications ───────────────────────────────────────────────────────────
+// Demo notifications removed — real notifications will be generated by actions
+export const INITIAL_NOTIFICATIONS: InAppNotification[] = [];
 
-export const INITIAL_CERTIFICATES: CertificateRecord[] = [
-  {
-    id: 'cert-1',
-    certificateId: 'ADV26-CERT-2026-8801',
-    participantName: 'Arjun Mehta',
-    teamName: 'CineCraft Innovators',
-    teamRegId: 'ADV26-TM-1042',
-    roleInTeam: 'Team Leader',
-    categoryName: 'Startups & Entrepreneurs',
-    awardTitle: 'Winner',
-    issueDate: '16 November 2026',
-    isValid: true,
-    verificationUrl: '/certificates/verify/ADV26-CERT-2026-8801',
-  },
-  {
-    id: 'cert-2',
-    certificateId: 'ADV26-CERT-2026-8802',
-    participantName: 'Priya Sharma',
-    teamName: 'CineCraft Innovators',
-    teamRegId: 'ADV26-TM-1042',
-    roleInTeam: 'Team Member',
-    categoryName: 'Startups & Entrepreneurs',
-    awardTitle: 'Winner',
-    issueDate: '16 November 2026',
-    isValid: true,
-    verificationUrl: '/certificates/verify/ADV26-CERT-2026-8802',
-  },
-];
+// ─── Certificates ────────────────────────────────────────────────────────────
+// Demo certificates removed — issued only to verified participants post-event
+export const INITIAL_CERTIFICATES: CertificateRecord[] = [];
