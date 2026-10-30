@@ -1,12 +1,8 @@
 import { Suspense } from 'react';
 import CertificateVerifyClient from './verify-client';
-import { INITIAL_CERTIFICATES } from '@/lib/store';
 
-export async function generateStaticParams() {
-  return INITIAL_CERTIFICATES.map((cert) => ({
-    id: cert.certificateId,
-  }));
-}
+// Fully dynamic — certificates are issued at runtime, not build time
+export const dynamic = 'force-dynamic';
 
 export default async function CertificateVerificationPage({
   params,
